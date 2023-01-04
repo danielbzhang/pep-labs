@@ -94,7 +94,7 @@ public class CreateTableWithPKTest {
     public void cleanup(){
         try {
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "DROP TABLE songs;";
+            String sql = "DROP TABLE song;";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {

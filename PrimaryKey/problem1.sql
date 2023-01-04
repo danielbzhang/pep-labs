@@ -1,6 +1,5 @@
--- DROP TABLE song;
-CREATE TABLE song(
+CREATE TABLE song (
     id SERIAL PRIMARY KEY,
-    title VARCHAR NOT NULL,
-    artist VARCHAR NOT NULL
+    title VARCHAR(100),
+    artist VARCHAR(100)
 );
