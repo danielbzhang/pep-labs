@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class CombineArrays {
     /**
@@ -8,7 +10,16 @@ public class CombineArrays {
      * @return an array containing the contents of arr1 followed by the contents of arr2.
      */
     public int[] combine(int[] arr1, int[] arr2){
+        int len = arr1.length + arr2.length;
+        int[] both = new int[len];
+        for (int i = 0; i < arr1.length; i++) {
+            both[i] = arr1[i];
+        }
 
-        return null;
+        for (int i = arr1.length; i < len; i++) {
+            both[i] = arr2[i-arr1.length];
+        }
+
+        return both;
     }
 }
