@@ -114,7 +114,7 @@ public class BookDAO {
         List<Book> books = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "SELECT * FROM book WHERE COUNT(isbn) > 0 GROUP BY title";
+            String sql = "SELECT * FROM book WHERE COUNT(isbn) > 0 GROUP BY author_id";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setInt method here.
