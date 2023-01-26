@@ -1,4 +1,7 @@
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Isogram {
     /**
@@ -14,12 +17,13 @@ public class Isogram {
      * @return true if str is an isogram, false otherwise.
      */
     public boolean isIsogram(String str){
-        HashMap<Character, Integer> hs = new HashMap<>();
-        for (int i = 0; i < str.length(); i++) {
-            int res = hs.get(str.charAt(i));
-            if(res != null) {
-                
-            }
+
+        String[] myArr = str.split("");
+        Set<String> mySet = new HashSet<String>(Arrays.asList(myArr));
+
+        if(mySet.size() == myArr.length) {
+            return true;
         }
+        return false;
     }
 }
