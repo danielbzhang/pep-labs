@@ -2,8 +2,6 @@
 import java.util.List;
 
 public class LargestSum {
-    // private int result;
-
     /**
      * Get the largest possible sum that can be obtained from a pair of values in the list. A number can't be added
      * to itself, unless there are duplicates.
